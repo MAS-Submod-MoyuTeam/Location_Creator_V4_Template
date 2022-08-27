@@ -40,56 +40,38 @@ init -1 python:
                 }
             },
             config={
-            # imgmaps 文件路径前缀
-            'location_assets_prefix': 'mod_assets/location/Location_Creator/'
-        }
+                # 是否启用entry_pp
+                'entry_pp_enable': False,
+                # 是否启用exit_pp
+                'exit_pp_enable': False,
+                # 进入房间时的聊天内容 格式为(1eua, "要说的话")
+                'entry_talk': None,
+                # 回到太空教室时的聊天内容
+                'exit_talk': None,
+                # 更换桌面，文件应该位于mod_assets/monika/t，命名格式为 table-<desk_acs的值>.png，需要启用entry_pp和exit_pp
+                'desk_acs': None,
+                # 更换椅子，文件应该位于mod_assets/monika/t，命名格式为 chair-<chair_acs的值>.png，需要启用entry_pp和exit_pp
+                'chair_acs': None,
+                # 图片路径前置
+                'location_assets_prefix':"mod_assets/location/Location_Creator/"
+            },
+            setting={
+                # 禁用天气变换
+                'disable_progressive': False,
+                # 禁用天气动画
+                'hide_masks': False,
+                # 隐藏日历
+                'hide_calendar': True,
+                # 解锁状态
+                'unlocked': True,
+                # 进入房间时会执行一次entry_pp，需要打开config中对应的enable
+                'entry_pp': None,
+                # 离开房间后会执行一次exit_pp，需要打开config中对应的enable
+                'exit_pp': None,
+                # 额外属性
+                'ex_props': None,
+                # MASDecoManager 应该是特定节日的装饰管理器
+                'deco_man': None
+            }
         )
-    )
-
-    # 如果你有改房间设置项的需求，请修改以下内容，如果没有则可以完全删除
-    # 以下为默认情况
-    store.LocationManager.set_info(
-        # 要设置的房间id，同你一开始写的
-        location = "Location_Creator_V4_template",
-        # 设置项，以下为默认设置
-        setting={
-            # 禁用天气变换
-            'disable_progressive': False,
-            # 禁用天气动画
-            'hide_masks': False,
-            # 隐藏日历
-            'hide_calendar': True,
-            # 解锁状态
-            'unlocked': True,
-            # 进入房间时会执行一次entry_pp，需要打开config中对应的enable
-            'entry_pp': None,
-            # 离开房间后会执行一次exit_pp，需要打开config中对应的enable
-            'exit_pp': None,
-            # 额外属性
-            'ex_props': None,
-            # MASDecoManager 应该是特定节日的装饰管理器
-            'deco_man': None
-        }
-    )
-
-    # 如果你有改模板设置项的需求，请修改以下内容，如果没有则可以完全删除
-    # 以下为默认情况
-    store.LocationManager.set_config(
-        # 要设置的房间id，同你一开始写的
-        location = "Location_Creator_V4_template",
-        # 设置项，以下为默认设置
-        setting={
-            # 是否启用entry_pp
-            'entry_pp_enable': False,
-            # 是否启用exit_pp
-            'exit_pp_enable': False,
-            # 进入房间时的聊天内容 格式为(1eua, "要说的话")
-            'entry_talk': None,
-            # 回到默认房间时的聊天内容
-            'exit_talk': None,
-            # 更换桌面，文件应该位于mod_assets/monika/t，命名格式为 table-<desk_acs的值>.png，需要启用entry_pp和exit_pp
-            'desk_acs': None,
-            # 更换椅子，文件应该位于mod_assets/monika/t，命名格式为 chair-<chair_acs的值>.png，需要启用entry_pp和exit_pp
-            'chair_acs': None,
-        }
     )
