@@ -39,12 +39,14 @@ init -1 python:
                     'snow':None
                 }
             },
+            # 模板配置项 不需要的选项可以删除 你全删了也行：)
+            # 以下为默认值
             config={
                 # 是否启用entry_pp
                 'entry_pp_enable': False,
                 # 是否启用exit_pp
                 'exit_pp_enable': False,
-                # 进入房间时的聊天内容 格式为(1eua, "要说的话")
+                # 进入房间时的聊天内容 格式为[('1eua', "要说的话"), ('2eua', "想说的话2")]
                 'entry_talk': None,
                 # 回到太空教室时的聊天内容
                 'exit_talk': None,
@@ -55,6 +57,8 @@ init -1 python:
                 # 图片路径前置
                 'location_assets_prefix':"mod_assets/location/Location_Creator/"
             },
+            # 房间配置项 不需要的选项可以删除 你全删了也行：)
+            # 以下为默认值
             setting={
                 # 禁用天气变换
                 'disable_progressive': False,
@@ -70,7 +74,7 @@ init -1 python:
                 'exit_pp': None,
                 # 额外属性
                 'ex_props': None,
-                # MASDecoManager 应该是特定节日的装饰管理器
+                # MASDecoManager 应该是特定节日的装饰管理器 待开发：）
                 'deco_man': None
             }
         )
